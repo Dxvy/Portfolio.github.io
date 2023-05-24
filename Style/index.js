@@ -1,3 +1,21 @@
+document.addEventListener("DOMContentLoaded", function() {
+    var shrinkHeader = 300;
+    window.addEventListener("scroll", function() {
+        var scroll = getCurrentScroll();
+        var header = document.querySelector(".top");
+        if (scroll >= shrinkHeader) {
+            header.classList.add("shrink");
+        } else {
+            header.classList.remove("shrink");
+        }
+    });
+
+    function getCurrentScroll() {
+        return window.pageYOffset || document.documentElement.scrollTop;
+    }
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
     // Main variables
     var aboutTitle = document.querySelector(".about-myself .content h2");

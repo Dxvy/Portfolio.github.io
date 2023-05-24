@@ -1,4 +1,54 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans);
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+@keyframes waveAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes textGradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Smooth scrolling sur l'entièreté du site */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 *,
 *:before,
 *:after {
@@ -18,6 +68,52 @@ body {
     background: #f9f9f9;
     font-size: 16px;
     font-family: "PT Sans", sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(45deg, #007bff, #00c853);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    z-index: 999;
+    box-shadow: 0px 2px 3px #2d2d2d;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    transition: all 0.3s;
+    font-size: 20px;
+    color: #fff;
+    font-family: cursive;
+}
+
+.top.shrink{
+    height: 40px;
+    font-size: 15px;
+
+}
+
+.top ul{
+    list-style: none;
+}
+
+.top ul li a{
+    margin: 0 50px;
+}
+
+.top ul li > a:hover{
+    color: #000;
+    transition: all .2s ease-in-out;
+    transform: scale(1.2);
 }
 
 a {
@@ -51,11 +147,18 @@ section {
     transform: translate(0%, -50%);
     text-align: center;
     opacity: 0;
+    font-family: 'Bruno Ace SC', cursive;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 30px;
 }
 .hero .content .header h1 {
     color: #fff;
     font-size: 2.5em;
     text-shadow: 0px 2px 3px #2d2d2d;
+    animation: waveAnimation 3s ease-in-out infinite;
+
+
 }
 
 /*##### ABOUT MYSELF SECTION #####*/
@@ -331,42 +434,9 @@ section {
     color: #444;
 }
 
-/*##### CONTACT SECTION #####*/
-.contact {
-    padding: 30px 0;
-}
-.contact .socials {
-    list-style-type: none;
-    width: 100%;
-}
-.contact .socials .social {
-    width: 25%;
-    float: left;
-    text-align: center;
-}
-.contact .socials .social a {
-    color: #3d3d3d;
-    font-size: 1.5em;
-    -webkit-transition: color 0.3s;
-    -moz-transition: color 0.3s;
-    transition: color 0.3s;
-}
-.contact .socials .social .email:hover {
-    color: #c8a028;
-}
-.contact .socials .social .twitter:hover {
-    color: #57aee7;
-}
-.contact .socials .social .linkedin:hover {
-    color: #0177b5;
-}
-.contact .socials .social .codepen:hover {
-    color: #707070;
-}
-.contact .clear {
-    clear: both;
-}
-
+/* ############################
+        FOOTER SECTION
+ ############################ */
 .footer {
     padding: 25px 0;
     text-align: center;
