@@ -294,6 +294,37 @@ section {
     align-items: center;
 }
 
+.skills .content{
+    text-align: center;
+}
+
+.skill-container{
+    display: flex;
+    /*flex-direction: row;*/
+flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 2px 3px #2d2d2d;
+    margin: 20px;
+    padding: 10px;
+}
+
+.skill img {
+    margin-top: 10px;
+    width: 125px;
+    height: 125px;
+}
 /*##### RESUME SECTION #####*/
 .resume {
     background: #1a1a1a;
