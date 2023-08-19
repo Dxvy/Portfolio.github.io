@@ -71,8 +71,22 @@ body {
 }
 
 body::-webkit-scrollbar {
-    display: none;
+    /*display: none;*/
+    width: 12px;
 }
+
+body::-webkit-scrollbar-track {
+    background:  #1a1a1a;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #007bff, #00c853);    /* color of the scroll thumb */
+    animation: gradientAnimation 10s ease infinite;
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid;  /* creates padding around scroll thumb */
+}
+
+/*##### HEADER SECTION #####*/
 
 .top{
     position: fixed;
@@ -171,17 +185,23 @@ section {
 .about-myself .content h2 {
     color: #3d3d3d;
     font-size: 3em;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     -webkit-transform: translateY(-50px) scale(0);
     transform: translateY(-50px) scale(0);
     -webkit-transition: transform 0.7s;
     -moz-transition: transform 0.7s;
     transition: transform 0.7s;
+    font-weight: bold;
 }
 .about-myself .content .aboutTitleVisible {
     -webkit-transform: translateY(0px) scale(1);
     transform: translateX(0px) scale(1);
 }
+
+.about-myself .content p{
+    font-size: 1.2em;
+}
+
 .about-myself .content p span {
     color: #c0392b;
     font-weight: bold;
@@ -269,77 +289,9 @@ section {
 /*##### SKILLS SECTION #####*/
 .skills {
     padding: 70px 20px;
-}
-.skills .content .development-wrapper .development-title {
-    color: #3c3c3c;
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.skills .content .development-wrapper .skills-bar-container {
-    position: relative;
-    width: 100%;
-    list-style-type: none;
-}
-.skills .content .development-wrapper .skills-bar-container li {
-    width: 100%;
-    margin-bottom: 20px;
-}
-.skills .content .development-wrapper .skills-bar-container li .progressbar-title {
-    color: #3c3c3c;
-    margin-bottom: 5px;
-}
-.skills .content .development-wrapper .skills-bar-container li .progressbar-title h3 {
-    display: inline-block;
-}
-.skills .content .development-wrapper .skills-bar-container li .progressbar-title .percent {
-    position: absolute;
-    right: 20px;
-    font-size: 1.1em;
-}
-.skills .content .development-wrapper .skills-bar-container li .bar-container {
-    background: #ececec;
-    position: relative;
-    width: 100%;
-    height: 10px;
-}
-.skills .content .development-wrapper .skills-bar-container li .bar-container .progressbar {
-    background: #34495e;
-    position: absolute;
-    width: 0%;
-    height: 100%;
-}
-.skills .content .tools-knowledge-wrapper {
-    width: 100%;
-}
-.skills .content .tools-knowledge-wrapper .tools-wrapper,
-.skills .content .tools-knowledge-wrapper .knowledge-wrapper {
-    position: relative;
-    padding: 20px 0;
-    widht: 100%;
-    text-align: center;
-}
-.skills .content .tools-knowledge-wrapper .tools-wrapper .title,
-.skills .content .tools-knowledge-wrapper .knowledge-wrapper .title {
-    color: #3c3c3c;
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-.skills .content .tools-knowledge-wrapper .tools-wrapper ul,
-.skills .content .tools-knowledge-wrapper .knowledge-wrapper ul {
-    list-style-type: none;
-    margin-left: 40px;
-}
-.skills .content .tools-knowledge-wrapper .tools-wrapper ul li,
-.skills .content .tools-knowledge-wrapper .knowledge-wrapper ul li {
-    color: #444;
-    font-weight: bold;
-    font-size: 1.1em;
-    text-align: left;
-}
-.skills .content .tools-knowledge-wrapper .tools-wrapper ul li i,
-.skills .content .tools-knowledge-wrapper .knowledge-wrapper ul li i {
-    color: #27ae60;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*##### RESUME SECTION #####*/
