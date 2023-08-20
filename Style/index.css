@@ -61,13 +61,14 @@ html,
 body {
     width: 100%;
     height: 100%;
+
 }
 
 body {
     color: #444;
     background: #f9f9f9;
     font-size: 16px;
-    font-family: "PT Sans", sans-serif;
+    font-family: 'Bruno Ace SC', cursive;
 }
 
 body::-webkit-scrollbar {
@@ -391,6 +392,7 @@ flex-wrap: wrap;
     font-size: 2em;
     margin-bottom: 50px;
 }
+
 .portfolio .content .projects {
     width: 100%;
 }
